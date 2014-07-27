@@ -13,9 +13,7 @@ no = 0;
 num = numeric();
 colnum = 1;
 for (colnum in 1:length(vector)){
-    #split = unlist(strsplit(vector[colnum],"-")); 
-    #temp = sum(split == "mean()") + sum(split == "std()");
-    if (!is.na(grep("mean()",vector[colnum],fixed=T)||grep("std()",vector[colnum],fixed=T))){
+        if (!is.na(grep("mean()",vector[colnum],fixed=T)||grep("std()",vector[colnum],fixed=T))){
         no = no + 1;
         num[no] = colnum;
     }
